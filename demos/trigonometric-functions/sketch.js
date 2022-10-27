@@ -18,7 +18,13 @@ function draw() {
 
   stroke("black");
   fill(255);
-  text("Theta = " + ceil(t / (PI / 128)) + "PI / 128", 10, 10, 70, 80);
+  text(
+    "Theta = " + -ceil((t / (PI / 128) / 128) * 100) / 100 + "PI",
+    10,
+    10,
+    120,
+    120
+  );
 
   var x = Math.cos(t);
   var y = Math.sin(t);
