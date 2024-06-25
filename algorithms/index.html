@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+      <link rel="stylesheet" href="./snipped.css">
+   </head>
+   <body>
+<div class="px-4 sm:px-6 lg:px-8 prose max-w-none snipcss-UVd3o">
+    <h3>تنبيه حول حقوق الملكية الفكرية</h3>
+    <p><strong>عزيزي الزميل/عزيزتي الزميلة،</strong></p>
+    <p>تتضمن هذه الملاحظات مجهودًا شخصيًا واستثمارًا كبيرًا من الوقت والجهد. لذلك، يُرجى مراعاة ما يلي:</p>
+    <ul>
+        <li><strong>هذه الملاحظات مخصصة للاستخدام الشخصي فقط.</strong></li>
+        <li><strong>يمنع منعًا باتًا نسخ أو نقل أو تقديم هذه الملاحظات كعمل شخصي أو مشروع فردي.</strong></li>
+        <li><strong>يرجى احترام حقوق الملكية الفكرية وعدم ارتكاب أي أعمال تعدي على حقوق التأليف والنشر.</strong></li>
+    </ul>
+    <p>الانتحال يعتبر انتهاكًا أكاديميًا جادًا، وقد يؤدي إلى عواقب وخيمة. بدلاً من ذلك، يمكننا التعاون معًا ومشاركة الأفكار بطريقة قانونية وأخلاقية.</p>
+    <p>شكرًا لتفهمكم واحترامكم.</p>
+    <h1>تعريف المصفوفات</h1>
+    <pre><code>var bookName = ["الخوارزميات وبنى المعطيات", "كتاب آخر", "كتاب ثالث"]
+var bookNumber = [520, 321, 123]
+var currentQuantity = [3, 5, 2]
+var baseQuantity = [10, 7, 3]</code></pre>
+    <p>المصفوفة هي بنية بيانات بنستخدمها لتخزين مجموعة من العناصر بنفس النوع تحت اسم واحد. العناصر بتكون مرتبة بترتيب معين وكل عنصر إله رقم (index) ببلش من الصفر. المصفوفات بتسهل علينا التعامل مع مجموعة من البيانات بنفس الوقت.</p>
+    <p>خلينا نشرح المصفوفات الموجودة بالكود تبعنا:</p>
+    <pre><code>var bookName = ["الخوارزميات وبنى المعطيات", "كتاب آخر", "كتاب ثالث"]</code></pre>
+    <p>هاي المصفوفة اسمها <code>bookName</code>. بتخزن أسماء الكتب يلي عنا. كل كتاب إله index ببلش من الصفر. مثلاً، "الخوارزميات وبنى المعطيات" هو العنصر الأول وإله index صفر، "كتاب آخر" هو العنصر الثاني وإله index واحد، وهكذا.</p>
+    <pre><code>var bookNumber = [520, 321, 123]</code></pre>
+    <p>هاي المصفوفة اسمها <code>bookNumber</code>. بتخزن أرقام الكتب. كل رقم كتاب مطابق لنفس ترتيب اسم الكتاب بالمصفوفة <code>bookName</code>. مثلاً، "الخوارزميات وبنى المعطيات" رقمه 520 وهكذا.</p>
+    <pre><code>var currentQuantity = [3, 5, 2]
+</code></pre>
+    <p>هاي المصفوفة اسمها <code>currentQuantity</code>. بتخزن الكمية الحالية من كل كتاب. مثلاً، عنا 3 نسخ من "الخوارزميات وبنى المعطيات"، 5 نسخ من "كتاب آخر"، و2 من "كتاب ثالث".</p>
+    <pre><code>var baseQuantity = [10, 7, 3]
+</code></pre>
+    <p>هاي المصفوفة اسمها <code>baseQuantity</code>. بتخزن الكمية الأساسية لكل كتاب يلي لازم تكون موجودة بالمكتبة. مثلاً، لازم يكون عنا 10 نسخ من "الخوارزميات وبنى المعطيات"، 7 نسخ من "كتاب آخر"، و3 نسخ من "كتاب ثالث".</p>
+    <p>هيك منكون شرحنا تعريف المصفوفات وكيفية استخدامهم لتخزين بيانات مرتبة ومرتبة بشكل يسهل علينا التعامل معها.</p>
+    <h1>البحث عن كتاب ما حسب الرقم الخاص بهذا الكتاب</h1>
+    <pre><code>function searchBookByNumber(bookNumberInput):
+    for (i = 0; i &lt; length(bookNumber) - 1; i + 1)
+        if (bookNumber[i] = bookNumberInput) then
+            return bookName[i]
+    return "الكتاب غير موجود"
+</code></pre>
+    <p>التابع <code>searchBookByNumber</code> هي دالة بتبحث عن اسم كتاب بناءً على رقم الكتاب المدخل (<code>bookNumberInput</code>). الكود بستخدم حلقة <code>for</code> ليتحقق من كل عنصر في المصفوفة <code>bookNumber</code> ويقارن الرقم المدخل بالأرقام الموجودة في المصفوفة. إذا لقى الرقم، بيرجع اسم الكتاب المطابق من المصفوفة <code>bookName</code>. إذا ما لقى الرقم، بيرجع رسالة "الكتاب غير موجود".</p>
+    <p>خلينا نشرح الكود خطوة بخطوة:</p>
+    <pre><code>function searchBookByNumber(bookNumberInput):</code></pre>
+    <p>هون منعرف الدالة <code>searchBookByNumber</code> يلي بتاخد مدخل واحد هو <code>bookNumberInput</code>.</p>
+    <pre><code>for (I = 0; I &lt; length(bookNumber) - 1; I + 1)</code></pre>
+    <p>هاي حلقة <code>for</code>، رح تبدأ من <code>I = 0</code> (العنصر الأول في المصفوفة)، وتستمر طالما <code>I</code> أصغر من طول المصفوفة <code>bookNumber</code> ناقص واحد (حتى نوصل لآخر عنصر في المصفوفة)، وبتزيد <code>I</code> بقيمة 1 في كل دورة.</p>
+    <pre><code>if (bookNumber[I] = bookNumberInput) then</code></pre>
+    <p>داخل حلقة <code>for</code>، منستخدم شرط <code>if</code> لنتحقق إذا كان الرقم في المصفوفة <code>bookNumber</code> عند الموقع <code>I</code> يساوي الرقم المدخل <code>bookNumberInput</code>.</p>
+    <pre><code>return bookName[I]</code></pre>
+    <p>إذا تحقق الشرط وكان الرقم موجود، منرجع اسم الكتاب المطابق من المصفوفة <code>bookName</code> عند الموقع <code>I</code>.</p>
+    <pre><code>return "الكتاب غير موجود"</code></pre>
+    <p>إذا انتهت الحلقة بدون ما نلاقي الرقم المطلوب، منرجع رسالة "الكتاب غير موجود".</p>
+    <p>هيك بيكون الكود النهائي مع التوضيحات:</p>
+    <pre><code>function searchBookByNumber(bookNumberInput):
+    for (I = 0; I &lt; length(bookNumber) - 1; I + 1)
+        if (bookNumber[I] = bookNumberInput) then
+            return bookName[I]
+    return "الكتاب غير موجود"</code></pre>
+    <p>ببساطة، هاي الدالة بتبحث في المصفوفة <code>bookNumber</code> عن الرقم المدخل، وإذا لقيته، بترجع اسم الكتاب، وإذا ما لقيته، بترجع رسالة "الكتاب غير موجود".</p>
+    <h1>البحث عن الرقم المخصص للكتاب، وذلك عن طريق إدخال الاسم الكامل للكتاب</h1>
+    <pre><code>function searchNumberByBookName(bookNameInput):
+    for (i = 0; i &lt; length(bookName) - 1; i + 1)
+        if (bookName[i] = bookNameInput) then
+            return bookNumber[i]
+    return "رقم الكتاب غير موجود"
+</code></pre>
+    <p>التابع <code>searchNumberByBookName</code> هي دالة بتبحث عن رقم كتاب بناءً على اسم الكتاب المدخل (<code>bookNameInput</code>). الكود بستخدم حلقة <code>for</code> ليتحقق من كل عنصر في المصفوفة <code>bookName</code> ويقارن الاسم المدخل بالأسماء الموجودة في المصفوفة. إذا لقى الاسم، بيرجع رقم الكتاب المطابق من المصفوفة <code>bookNumber</code>. إذا ما لقى الاسم، بيرجع رسالة "رقم الكتاب غير موجود".</p>
+    <p>خلينا نشرح الكود خطوة بخطوة:</p>
+    <pre><code>function searchNumberByBookName(bookNameInput):</code></pre>
+    <p>هون منعرف الدالة <code>searchNumberByBookName</code> يلي بتاخد مدخل واحد هو <code>bookNameInput</code>.</p>
+    <pre><code>for (I = 0; I &lt; length(bookName) - 1; I + 1)</code></pre>
+    <p>هاي حلقة <code>for</code>، رح تبدأ من <code>I = 0</code> (العنصر الأول في المصفوفة)، وتستمر طالما <code>I</code> أصغر من طول المصفوفة <code>bookName</code> ناقص واحد (حتى نوصل لآخر عنصر في المصفوفة)، وبتزيد <code>I</code> بقيمة 1 في كل دورة.</p>
+    <pre><code>if (bookName[I] = bookNameInput) then</code></pre>
+    <p>داخل حلقة <code>for</code>، منستخدم شرط <code>if</code> لنتحقق إذا كان الاسم في المصفوفة <code>bookName</code> عند الموقع <code>I</code> يساوي الاسم المدخل <code>bookNameInput</code>.</p>
+    <pre><code>return bookNumber[I]</code></pre>
+    <p>إذا تحقق الشرط وكان الاسم موجود، منرجع رقم الكتاب المطابق من المصفوفة <code>bookNumber</code> عند الموقع <code>I</code>.</p>
+    <pre><code>return "رقم الكتاب غير موجود"</code></pre>
+    <p>إذا انتهت الحلقة بدون ما نلاقي الاسم المطلوب، منرجع رسالة "رقم الكتاب غير موجود".</p>
+    <p>هيك بيكون الكود النهائي مع التوضيحات:</p>
+    <pre><code>function searchNumberByBookName(bookNameInput):
+    for (I = 0; I &lt; length(bookName) - 1; I + 1)
+        if (bookName[I] = bookNameInput) then
+            return bookNumber[I]
+    return "رقم الكتاب غير موجود"</code></pre>
+    <p>ببساطة، هاي الدالة بتبحث في المصفوفة <code>bookName</code> عن الاسم المدخل، وإذا لقيته، بترجع رقم الكتاب، وإذا ما لقيته، بترجع رسالة "رقم الكتاب غير موجود".</p>
+    <h1>إيجاد عدد النسخ الحالية من الكتاب</h1>
+    <pre><code>function getCurrentQuantity(bookNumberInput):
+    for(i = 0; i &lt; length(bookNumber) - 1; i + 1)
+        if (bookNumber[i] = bookNumberInput) then
+            return currentQuantity[i]
+    return "الكتاب غير موجود"
+</code></pre>
+    <p>التابع <code>getCurrentQuantity</code> هي دالة بتبحث عن الكمية الحالية لكتاب بناءً على رقم الكتاب المدخل (<code>bookNumberInput</code>). الكود بستخدم حلقة <code>for</code> ليتحقق من كل عنصر في المصفوفة <code>bookNumber</code> ويقارن الرقم المدخل بالأرقام الموجودة في المصفوفة. إذا لقى الرقم، بيرجع الكمية الحالية للكتاب المطابق من المصفوفة <code>currentQuantity</code>. إذا ما لقى الرقم، بيرجع رسالة "الكتاب غير موجود".</p>
+    <p>خلينا نشرح الكود خطوة بخطوة:</p>
+    <pre><code>function getCurrentQuantity(bookNumberInput):</code></pre>
+    <p>هون منعرف الدالة <code>getCurrentQuantity</code> يلي بتاخد مدخل واحد هو <code>bookNumberInput</code>.</p>
+    <pre><code>for(I = 0; I &lt; length(bookNumber) - 1; I + 1)</code></pre>
+    <p>هاي حلقة <code>for</code>، رح تبدأ من <code>I = 0</code> (العنصر الأول في المصفوفة)، وتستمر طالما <code>I</code> أصغر من طول المصفوفة <code>bookNumber</code> ناقص واحد (حتى نوصل لآخر عنصر في المصفوفة)، وبتزيد <code>I</code> بقيمة 1 في كل دورة.</p>
+    <pre><code>if (bookNumber[I] = bookNumberInput) then</code></pre>
+    <p>داخل حلقة <code>for</code>، منستخدم شرط <code>if</code> لنتحقق إذا كان الرقم في المصفوفة <code>bookNumber</code> عند الموقع <code>I</code> يساوي الرقم المدخل <code>bookNumberInput</code>.</p>
+    <pre><code>return currentQuantity[I]</code></pre>
+    <p>إذا تحقق الشرط وكان الرقم موجود، منرجع الكمية الحالية للكتاب المطابق من المصفوفة <code>currentQuantity</code> عند الموقع <code>I</code>.</p>
+    <pre><code>return "الكتاب غير موجود"</code></pre>
+    <p>إذا انتهت الحلقة بدون ما نلاقي الرقم المطلوب، منرجع رسالة "الكتاب غير موجود".</p>
+    <p>هيك بيكون الكود النهائي مع التوضيحات:</p>
+    <pre><code>function getCurrentQuantity(bookNumberInput):
+    for(I = 0; I &lt; length(bookNumber) - 1; I + 1)
+        if (bookNumber[I] = bookNumberInput) then
+            return currentQuantity[I]
+    return "الكتاب غير موجود"</code></pre>
+    <p>ببساطة، هاي الدالة بتبحث في المصفوفة <code>bookNumber</code> عن الرقم المدخل، وإذا لقيته، بترجع الكمية الحالية للكتاب، وإذا ما لقيته، بترجع رسالة "الكتاب غير موجود".</p>
+    <h1>إيجاد عدد النسخ الأساسية من الكتاب</h1>
+    <pre><code>function getBaseQuantity(bookNumberInput):
+    for (i = 0; i &lt; length(bookNumber) - 1; i + 1)
+        if (bookNumber[i] = bookNumberInput) then
+            return baseQuantity[i]
+    return "الكتاب غير موجود"
+</code></pre>
+    <p>التابع <code>getBaseQuantity</code> هي دالة بتبحث عن الكمية الأساسية لكتاب بناءً على رقم الكتاب المدخل (<code>bookNumberInput</code>). الكود بستخدم حلقة <code>for</code> ليتحقق من كل عنصر في المصفوفة <code>bookNumber</code> ويقارن الرقم المدخل بالأرقام الموجودة في المصفوفة. إذا لقى الرقم، بيرجع الكمية الأساسية للكتاب المطابق من المصفوفة <code>baseQuantity</code>. إذا ما لقى الرقم، بيرجع رسالة "الكتاب غير موجود".</p>
+    <p>خلينا نشرح الكود خطوة بخطوة:</p>
+    <pre><code>function getBaseQuantity(bookNumberInput):</code></pre>
+    <p>هون منعرف الدالة <code>getBaseQuantity</code> يلي بتاخد مدخل واحد هو <code>bookNumberInput</code>.</p>
+    <pre><code>for (I = 0; I &lt; length(bookNumber) - 1; I + 1)</code></pre>
+    <p>هاي حلقة <code>for</code>، رح تبدأ من <code>I = 0</code> (العنصر الأول في المصفوفة)، وتستمر طالما <code>I</code> أصغر من طول المصفوفة <code>bookNumber</code> ناقص واحد (حتى نوصل لآخر عنصر في المصفوفة)، وبتزيد <code>I</code> بقيمة 1 في كل دورة.</p>
+    <pre><code>if (bookNumber[I] = bookNumberInput) then</code></pre>
+    <p>داخل حلقة <code>for</code>، منستخدم شرط <code>if</code> لنتحقق إذا كان الرقم في المصفوفة <code>bookNumber</code> عند الموقع <code>I</code> يساوي الرقم المدخل <code>bookNumberInput</code>.</p>
+    <pre><code>return baseQuantity[I]</code></pre>
+    <p>إذا تحقق الشرط وكان الرقم موجود، منرجع الكمية الأساسية للكتاب المطابق من المصفوفة <code>baseQuantity</code> عند الموقع <code>I</code>.</p>
+    <pre><code>return "الكتاب غير موجود"</code></pre>
+    <p>إذا انتهت الحلقة بدون ما نلاقي الرقم المطلوب، منرجع رسالة "الكتاب غير موجود".</p>
+    <p>هيك بيكون الكود النهائي مع التوضيحات:</p>
+    <pre><code>function getBaseQuantity(bookNumberInput):
+    for (I = 0; I &lt; length(bookNumber) - 1; I + 1)
+        if (bookNumber[I] = bookNumberInput) then
+            return baseQuantity[I]
+    return "الكتاب غير موجود"</code></pre>
+    <p>ببساطة، هاي الدالة بتبحث في المصفوفة <code>bookNumber</code> عن الرقم المدخل، وإذا لقيته، بترجع الكمية الأساسية للكتاب، وإذا ما لقيته، بترجع رسالة "الكتاب غير موجود".</p>
+    <h1>إعارة كتاب</h1>
+    <pre><code>function borrowBook(bookNumberInput):
+    for (i = 0; i &lt; length(bookNumber) - 1; i + 1)
+        if (bookNumber[i] = bookNumberInput) then
+            if (currentQuantity[i] &gt; 0) then
+                currentQuantity[i] := currentQuantity - 1
+                return "تم إعارة الكتاب بنجاح"
+            else
+                return "لا يمكن إعارة الكتاب، لا توجد نسخ متاحة"
+    return "الكتاب غير موجود"
+</code></pre>
+    <p>الوظيفة <code>borrowBook</code> هي دالة بتقوم بإعارة كتاب بناءً على رقم الكتاب المدخل (<code>bookNumberInput</code>). الكود بستخدم حلقة <code>for</code> ليتحقق من كل عنصر في المصفوفة <code>bookNumber</code> ويقارن الرقم المدخل بالأرقام الموجودة في المصفوفة. إذا لقى الرقم، بيتحقق إذا كانت الكمية الحالية (<code>currentQuantity</code>) أكبر من صفر. إذا كانت الكمية أكبر من صفر، بيقلل الكمية الحالية بمقدار 1 وبيرجع رسالة "تم إعارة الكتاب بنجاح". إذا ما كانت الكمية الحالية أكبر من صفر، بيرجع رسالة "لا يمكن إعارة الكتاب، لا توجد نسخ متاحة". إذا ما لقى الرقم، ما برجع شيء (يمكن تحسين الكود ليعيد رسالة توضح عدم وجود الكتاب).</p>
+    <p>خلينا نشرح الكود خطوة بخطوة:</p>
+    <pre><code>function borrowBook(bookNumberInput):</code></pre>
+    <p>هون منعرف الدالة <code>borrowBook</code> يلي بتاخد مدخل واحد هو <code>bookNumberInput</code>.</p>
+    <pre><code>for (I = 0; I &lt; length(bookNumber) - 1; I + 1)</code></pre>
+    <p>هاي حلقة <code>for</code>، رح تبدأ من <code>I = 0</code> (العنصر الأول في المصفوفة)، وتستمر طالما <code>I</code> أصغر من طول المصفوفة <code>bookNumber</code> ناقص واحد (حتى نوصل لآخر عنصر في المصفوفة)، وبتزيد <code>I</code> بقيمة 1 في كل دورة.</p>
+    <pre><code>if (bookNumber[I] = bookNumberInput) then</code></pre>
+    <p>داخل حلقة <code>for</code>، منستخدم شرط <code>if</code> لنتحقق إذا كان الرقم في المصفوفة <code>bookNumber</code> عند الموقع <code>I</code> يساوي الرقم المدخل <code>bookNumberInput</code>.</p>
+    <pre><code>if (currentQuantity[I] &gt; 0) then</code></pre>
+    <p>إذا تحقق الشرط وكان الرقم موجود، منتحقق إذا كانت الكمية الحالية (<code>currentQuantity</code>) للكتاب عند الموقع <code>I</code> أكبر من صفر.</p>
+    <pre><code>currentQuantity[I] := currentQuantity[I] - 1</code></pre>
+    <p>إذا كانت الكمية الحالية أكبر من صفر، منقلل الكمية الحالية بمقدار 1.</p>
+    <pre><code>return "تم إعارة الكتاب بنجاح"</code></pre>
+    <p>بعد تقليل الكمية، منرجع رسالة "تم إعارة الكتاب بنجاح".</p>
+    <pre><code>else
+    return "لا يمكن إعارة الكتاب، لا توجد نسخ متاحة"</code></pre>
+    <p>إذا كانت الكمية الحالية تساوي صفر أو أقل، منرجع رسالة "لا يمكن إعارة الكتاب، لا توجد نسخ متاحة".</p>
+    <pre><code>return "الكتاب غير موجود"</code></pre>
+    <p>إذا انتهت الحلقة بدون ما نلاقي الرقم المطلوب، منرجع رسالة "الكتاب غير موجود".</p>
+    <p>هيك بيكون الكود النهائي:</p>
+    <pre><code>function borrowBook(bookNumberInput):
+    for (I = 0; I &lt; length(bookNumber) - 1; I + 1)
+        if (bookNumber[I] = bookNumberInput) then
+            if (currentQuantity[I] &gt; 0) then
+                currentQuantity[I] := currentQuantity[I] - 1
+                return "تم إعارة الكتاب بنجاح"
+            else
+                return "لا يمكن إعارة الكتاب، لا توجد نسخ متاحة"
+    return "الكتاب غير موجود"</code></pre>
+    <p>ببساطة، هاي الدالة بتبحث في المصفوفة <code>bookNumber</code> عن الرقم المدخل، وإذا لقيته، بتتحقق من الكمية الحالية، إذا في نسخ متاحة بتعير الكتاب وتقلل الكمية بمقدار 1، وإذا ما في نسخ متاحة، بترجع رسالة بتوضح هالشيء. إذا ما لقيت الرقم، بترجع رسالة "الكتاب غير موجود".</p>
+    <h1>إعادة كتاب</h1>
+    <pre><code>function returnBook(bookNumberInput):
+    for (i = 0; i &lt; length(bookNumber) - 1; i + 1)
+        if (bookNumber[i] = bookNumberInput) then
+            if (currentQuantity[i] &lt; baseQuantity[i]) then
+                currentQuantity[i] := currentQuantity + 1
+                return "تم إعادة الكتاب بنجاح"
+            else 
+                return "لا يمكن إعادة الكتاب، جميع النسخ متوفرة بالفعل"
+    return "الكتاب غير موجود"
+</code></pre>
+    <p>هي الدالة <code>returnBook</code> تستخدم لإعادة كتاب إلى المكتبة بناءً على رقم الكتاب المدخل (<code>bookNumberInput</code>). الكود بستخدم حلقة <code>for</code> ليتحقق من كل عنصر في المصفوفة <code>bookNumber</code> ويقارن الرقم المدخل بالأرقام الموجودة في المصفوفة. إذا لقى الرقم، يتحقق إذا كانت الكمية الحالية (<code>currentQuantity</code>) أقل من الكمية الأساسية (<code>baseQuantity</code>). إذا كانت الكمية الحالية أقل من الكمية الأساسية، يزيد الكمية الحالية بمقدار 1 ويُرجع رسالة "تم إعادة الكتاب بنجاح". إذا كانت الكمية الحالية تساوي أو تزيد عن الكمية الأساسية، يُرجع رسالة "لا يمكن إعادة الكتاب، جميع النسخ متوفرة بالفعل". إذا ما لقى الرقم، برجع رسالة بتوضح هاد الشي.</p>
+    <p>لح نشرح الكود خطوة بخطوة:</p>
+    <pre><code>function returnBook(bookNumberInput):</code></pre>
+    <p>نعرِّف هنا الدالة <code>returnBook</code> التي تأخذ مدخلًا واحدًا وهو <code>bookNumberInput</code>.</p>
+    <pre><code>for (I = 0; I &lt; length(bookNumber) - 1; I + 1)</code></pre>
+    <p>يبدأ هنا حلقة <code>for</code> من <code>I = 0</code> (العنصر الأول في المصفوفة)، وتستمر طالما <code>I</code> أصغر من طول المصفوفة <code>bookNumber</code> ناقص واحد (حتى نصل إلى آخر عنصر في المصفوفة)، ويزيد <code>I</code> بقيمة 1 في كل دورة.</p>
+    <pre><code>if (bookNumber[I] = bookNumberInput) then</code></pre>
+    <p>داخل حلقة <code>for</code>، نستخدم شرط <code>if</code> لنتحقق مما إذا كان الرقم في المصفوفة <code>bookNumber</code> عند الموقع <code>I</code> يساوي الرقم المدخل <code>bookNumberInput</code>.</p>
+    <pre><code>if (currentQuantity[I] &lt; baseQuantity[I]) then</code></pre>
+    <p>إذا تحقق الشرط وكان الرقم موجودًا، نتحقق مما إذا كانت الكمية الحالية (<code>currentQuantity</code>) أقل من الكمية الأساسية (<code>baseQuantity</code>).</p>
+    <pre><code>currentQuantity[I] := currentQuantity + 1</code></pre>
+    <p>إذا كانت الكمية الحالية أقل من الكمية الأساسية، نزيد الكمية الحالية بمقدار 1.</p>
+    <pre><code>return "تم إعادة الكتاب بنجاح"</code></pre>
+    <p>بعد زيادة الكمية الحالية، نرجع رسالة "تم إعادة الكتاب بنجاح".</p>
+    <pre><code>else
+    return "لا يمكن إعادة الكتاب، جميع النسخ متوفرة بالفعل"</code></pre>
+    <p>إذا كانت الكمية الحالية تساوي أو تزيد عن الكمية الأساسية، نرجع رسالة "لا يمكن إعادة الكتاب، جميع النسخ متوفرة بالفعل".</p>
+    <pre><code>return "الكتاب غير موجود"</code></pre>
+    <p>إذا انتهت الحلقة دون أن يتم العثور على الرقم المطلوب، نعود من دون إرجاع شيء (يمكن تحسين الكود ليرجع رسالة توضح عدم وجود الكتاب). الكود النهائي مع التوضيحات:</p>
+    <pre><code>function returnBook(bookNumberInput):
+    for (I = 0; I &lt; length(bookNumber) - 1; I + 1)
+        if (bookNumber[I] = bookNumberInput) then
+            if (currentQuantity[I] &lt; baseQuantity[I]) then
+                currentQuantity[I] := currentQuantity[I] + 1
+                return "تم إعادة الكتاب بنجاح"
+            else:
+                return "لا يمكن إعادة الكتاب، جميع النسخ متوفرة بالفعل"
+    return "الكتاب غير موجود"</code></pre>
+    <p>ببساطة، هذه الدالة تبحث في المصفوفة <code>bookNumber</code> عن الرقم المدخل,. إذا ما لقيت الرقم، بترجع رسالة "الكتاب غير موجود".</p>
+    <h1>إتلاف نسخة كتاب</h1>
+    <pre><code>function damageBook(bookNumberInput):
+    for (i = 0; i &lt; length(bookNumber) - 1; i + 1)
+        if (bookNumber[i] = bookNumberInput) then
+            if (currentQuantity[i] &gt; 0 and baseQuantity[i] &gt; 0) then
+                currentQuantity[i] := currentQuantity[i] - 1
+                baseQuantity[i] := baseQuantity[i] - 1
+                return "تم إتلاف نسخة من الكتاب بنجاح"
+            else
+                return "لا يمكن إتلاف نسخة من الكتاب، لا توجد نسخ متاحة"
+    return "الكتاب غير موجود"
+</code></pre>
+    <p>التابع <code>damageBook</code> هي دالة بتقوم بإتلاف نسخة من كتاب بناءً على رقم الكتاب المدخل (<code>bookNumberInput</code>). الكود بستخدم حلقة <code>for</code> ليتحقق من كل عنصر في المصفوفة <code>bookNumber</code> ويقارن الرقم المدخل بالأرقام الموجودة في المصفوفة. إذا لقى الرقم، بيتحقق إذا كانت الكمية الحالية (<code>currentQuantity</code>) والكمية الأساسية (<code>baseQuantity</code>) أكبر من صفر. إذا كانت الكمية الحالية والكمية الأساسية أكبر من صفر، بيقلل الكمية الحالية والكمية الأساسية بمقدار 1 وبيرجع رسالة "تم إتلاف نسخة من الكتاب بنجاح". إذا ما كانت الكمية الحالية أو الكمية الأساسية أكبر من صفر، بيرجع رسالة "لا يمكن إتلاف نسخة من الكتاب، لا توجد نسخ متاحة". إذا ما لقى الرقم، ما برجع شيء (يمكن تحسين الكود ليعيد رسالة توضح عدم وجود الكتاب).</p>
+    <p>خلينا نشرح الكود خطوة بخطوة:</p>
+    <pre><code>function damageBook(bookNumberInput):</code></pre>
+    <p>هون منعرف الدالة <code>damageBook</code> يلي بتاخد مدخل واحد هو <code>bookNumberInput</code>.</p>
+    <pre><code>for (I = 0; I &lt; length(bookNumber) - 1; I + 1)</code></pre>
+    <p>هاي حلقة <code>for</code>، رح تبدأ من <code>I = 0</code> (العنصر الأول في المصفوفة)، وتستمر طالما <code>I</code> أصغر من طول المصفوفة <code>bookNumber</code> ناقص واحد (حتى نوصل لآخر عنصر في المصفوفة)، وبتزيد <code>I</code> بقيمة 1 في كل دورة.</p>
+    <pre><code>if (bookNumber[I] = bookNumberInput) then</code></pre>
+    <p>داخل حلقة <code>for</code>، منستخدم شرط <code>if</code> لنتحقق إذا كان الرقم في المصفوفة <code>bookNumber</code> عند الموقع <code>I</code> يساوي الرقم المدخل <code>bookNumberInput</code>.</p>
+    <pre><code>if (currentQuantity[I] &gt; 0 and baseQuantity[I] &gt; 0) then</code></pre>
+    <p>إذا تحقق الشرط وكان الرقم موجود، منتحقق إذا كانت الكمية الحالية (<code>currentQuantity</code>) والكمية الأساسية (<code>baseQuantity</code>) للكتاب عند الموقع <code>I</code> أكبر من صفر.</p>
+    <pre><code>currentQuantity[I] := currentQuantity[I] - 1</code></pre>
+    <p>إذا كانت الكمية الحالية أكبر من صفر، منقلل الكمية الحالية بمقدار 1.</p>
+    <pre><code>baseQuantity[I] := baseQuantity[I] - 1</code></pre>
+    <p>إذا كانت الكمية الأساسية أكبر من صفر، منقلل الكمية الأساسية بمقدار 1.</p>
+    <pre><code>return "تم إتلاف نسخة من الكتاب بنجاح"</code></pre>
+    <p>بعد تقليل الكمية الحالية والكمية الأساسية، منرجع رسالة "تم إتلاف نسخة من الكتاب بنجاح".</p>
+    <pre><code>else
+    return "لا يمكن إتلاف نسخة من الكتاب، لا توجد نسخ متاحة"</code></pre>
+    <p>إذا كانت الكمية الحالية أو الكمية الأساسية تساوي صفر أو أقل، منرجع رسالة "لا يمكن إتلاف نسخة من الكتاب، لا توجد نسخ متاحة".</p>
+    <pre><code>return "الكتاب غير موجود"</code></pre>
+    <p>إذا انتهت الحلقة بدون ما نلاقي الرقم المطلوب، منرجع رسالة "الكتاب غير موجود".</p>
+    <p>هيك بيكون الكود النهائي:</p>
+    <pre><code>function damageBook(bookNumberInput):
+    for (I = 0; I &lt; length(bookNumber) - 1; I + 1)
+        if (bookNumber[I] = bookNumberInput) then
+            if (currentQuantity[I] &gt; 0 and baseQuantity[I] &gt; 0) then
+                currentQuantity[I] := currentQuantity[I] - 1
+                baseQuantity[I] := baseQuantity[I] - 1
+                return "تم إتلاف نسخة من الكتاب بنجاح"
+            else
+                return "لا يمكن إتلاف نسخة من الكتاب، لا توجد نسخ متاحة"
+    return "الكتاب غير موجود"</code></pre>
+    <p>ببساطة، هاي الدالة بتبحث في المصفوفة <code>bookNumber</code> عن الرقم المدخل، وإذا لقيته، بتتحقق من الكمية الحالية والكمية الأساسية، إذا في نسخ متاحة بتتلف نسخة وتقلل الكمية الحالية والكمية الأساسية بمقدار 1، وإذا ما في نسخ متاحة، بترجع رسالة بتوضح هالشيء. إذا ما لقيت الرقم، بترجع رسالة "الكتاب غير موجود".</p>
+</div>
+   </body>
+</html>
