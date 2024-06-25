@@ -1,0 +1,359 @@
+@font-face { 
+  font-family:'Samim';
+  src:url('./fonts/Samim.eot');
+  src:url('./fonts/Samim.eot?#iefix') format('embedded-opentype'),
+		 url('./fonts/Samim.woff') format('woff'),
+		 url('./fonts/Samim.ttf') format('truetype');
+  font-weight:normal;
+} 
+@font-face { 
+  font-family:'Samim';
+  src:url('./fonts/Samim-Bold.eot');
+  src:url('./fonts/Samim-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('./fonts/Samim-Bold.woff') format('woff'),
+		 url('./fonts/Samim-Bold.ttf') format('truetype');
+  font-weight:bold;
+} 
+@font-face { 
+  font-family:'Dubai-Medium';
+  src:url('./fonts/Dubai-Medium.eot');
+  src:url('./fonts/Dubai-Medium.eot') format('embedded-opentype'),
+        url('./fonts/Dubai-Medium.woff2') format('woff2'), 
+        url('./fonts/Dubai-Medium.woff') format('woff'), 
+        url('./fonts/Dubai-Medium.ttf') format('truetype');
+  font-weight:normal;
+  font-style:normal;
+} 
+  body {  
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    line-height:1.15;
+    direction:rtl;
+    font-size:100%;
+  }  
+body { 
+/* CSS Variables that may have been missed get put on body */ 
+    --tw-ring-inset:  var(--tw-empty,/*!*/ /*!*/);  
+} 
+
+* { 
+    box-sizing: border-box; 
+    border: 0 solid #e5e7eb;
+} 
+
+* { 
+    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/); 
+} 
+
+@media (min-width: 768px){ 
+  .md\:flex { 
+    display: flex;
+  } 
+}     
+
+body { 
+    margin: 0; 
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+} 
+
+body { 
+    font-family: inherit; 
+    line-height: inherit;
+} 
+
+body { 
+    direction: rtl; 
+    font-family: Dubai-Medium; 
+    height: 100%; 
+    padding: 0;
+} 
+
+html { 
+    line-height: 1.15; 
+    -webkit-text-size-adjust: 100%;
+} 
+
+html { 
+    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    line-height: 1.5;
+} 
+
+html { 
+    font-size: 100%;
+} 
+
+:root { 
+    -moz-tab-size: 4; 
+    -o-tab-size: 4; 
+    tab-size: 4;
+} 
+
+.prose { 
+    color: #333; 
+    max-width: 65ch;
+} 
+
+.prose { 
+    font-size: 1rem; 
+    line-height: 1.75;
+} 
+
+.prose { 
+    font-family: samim;
+} 
+
+.px-4 { 
+    padding-left: 1rem; 
+    padding-right: 1rem;
+} 
+
+.prose { 
+    color: #374151; 
+    max-width: 100%!important;
+} 
+
+@media (min-width: 640px){ 
+  .sm\:px-6 { 
+    padding-left: 1.5rem; 
+    padding-right: 1.5rem;
+  } 
+}     
+
+@media (min-width: 1024px){ 
+  .lg\:px-8 { 
+    padding-left: 2rem; 
+    padding-right: 2rem;
+  } 
+}     
+
+*,:after,:before { 
+    box-sizing: border-box; 
+    border: 0 solid #e5e7eb;
+} 
+
+:-webkit-scrollbar { 
+    width: 7px;
+} 
+
+:-webkit-scrollbar-thumb,:-webkit-scrollbar-thumb:hover { 
+    background: #2266a1;
+} 
+
+:-webkit-scrollbar-track { 
+    background: #d1e5f5;
+} 
+
+h3 { 
+    margin: 0;
+} 
+
+h3 { 
+    font-size: inherit; 
+    font-weight: inherit;
+} 
+
+.prose h3  { 
+    font-size: 1.25em; 
+    margin-top: 1.6em; 
+    margin-bottom: .6em; 
+    line-height: 1.6;
+} 
+
+.prose h3  { 
+    color: #2368a1; 
+    font-weight: 600;
+} 
+
+.prose > :first-child { 
+    margin-top: 0;
+} 
+
+p { 
+    margin: 0;
+} 
+
+p { 
+    font-size: 1rem; 
+    font-family: Samim,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+} 
+
+.prose p  { 
+    margin-top: 1.25em; 
+    margin-bottom: 1.25em;
+} 
+
+.prose h3 + *  { 
+    margin-top: 0;
+} 
+
+ul { 
+    margin: 0; 
+    padding: 0;
+} 
+
+ul { 
+    list-style: none;
+} 
+
+.prose ul  { 
+    margin-top: 1.25em; 
+    margin-bottom: 1.25em;
+} 
+
+h1 { 
+    margin: 0;
+} 
+
+h1 { 
+    font-size: inherit; 
+    font-weight: inherit;
+} 
+
+.prose h1  { 
+    color: #2368a1; 
+    font-weight: 800; 
+    font-size: 2.25em; 
+    margin-top: 0; 
+    margin-bottom: .8888889em; 
+    line-height: 1.1111111;
+} 
+
+.prose h1  { 
+    font-size: 2em!important; 
+    padding-bottom: 8px; 
+    border-bottom: 1px solid hsl(207deg 64% 78%);
+} 
+
+pre { 
+    font-family: ui-monospace,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace; 
+    font-size: 1em;
+} 
+
+pre { 
+    margin: 0;
+} 
+
+pre { 
+    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+} 
+
+.prose pre  { 
+    color: #e5e7eb; 
+    background-color: #1f2937; 
+    overflow-x: auto; 
+    font-size: .875em; 
+    line-height: 1.7142857; 
+    margin-top: 1.7142857em; 
+    margin-bottom: 1.7142857em; 
+    border-radius: .375rem; 
+    padding: .8571429em 1.1428571em;
+} 
+
+.prose > :last-child { 
+    margin-bottom: 0;
+} 
+
+strong { 
+    font-weight: bolder;
+} 
+
+.prose strong  { 
+    color: #111827; 
+    font-weight: 600;
+} 
+
+.prose li  { 
+    margin-top: .5em; 
+    margin-bottom: .5em;
+} 
+
+.prose ul > li { 
+    position: relative; 
+    padding-left: 1.75em;
+} 
+
+ .prose ul > li { 
+    padding-right: 1.75em; 
+    padding-left: 0;
+} 
+
+.prose ul > li::before { 
+    content: ""; 
+    position: absolute; 
+    background-color: #d1d5db; 
+    border-radius: 50%; 
+    width: .375em; 
+    height: .375em; 
+    top: calc(.875em - .1875em); 
+    left: .25em;
+} 
+
+.prose ol > li::before, .prose ul > li::before { 
+    right: 10px;
+} 
+
+ .prose ul > li { 
+    position: relative; 
+    padding-left: 1.75em;
+} 
+
+.prose ol > li, .prose ul > li { 
+    padding-right: 1.75em; 
+    padding-left: 0;
+} 
+
+code { 
+    font-family: ui-monospace,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace; 
+    font-size: 1em;
+} 
+
+code { 
+    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+} 
+
+pre code  { 
+    text-align: left!important; 
+    float: left; 
+    direction: ltr!important; 
+    background: #eee; 
+    width: 100%;
+} 
+
+.prose code  { 
+    color: #111827; 
+    font-weight: 600; 
+    font-size: .875em;
+} 
+
+.prose pre code  { 
+    background-color: transparent; 
+    border-width: 0; 
+    border-radius: 0; 
+    padding: 0; 
+    font-weight: 400; 
+    color: inherit; 
+    font-size: inherit; 
+    font-family: inherit; 
+    line-height: inherit;
+} 
+
+.prose code::after, .prose code::before { 
+    content: "`";
+} 
+
+.prose code::after, .prose code::before { 
+    content: none;
+} 
+
+.prose pre code::after, .prose pre code::before { 
+    content: none;
+} 
+
+.prose > ul > li > :first-child { 
+    margin-top: 1.25em;
+} 
+
+.prose > ul > li > :last-child { 
+    margin-bottom: 1.25em;
+} 
+
+
